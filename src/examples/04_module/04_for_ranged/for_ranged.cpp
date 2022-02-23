@@ -1,8 +1,7 @@
 #include "for_ranged.h"
-#include<iostream>
-#include<vector>
 
-using std::vector;
+
+using std::vector; using std::cout;
 
 /*
 Function loop_string_w_index 
@@ -32,5 +31,17 @@ s
 t
 */
 
+void loop_string_w_for_range(std::string str)
+{
+    for(auto ch: str)
+    {
+
+        cout<<ch<<"\n";
+        ch = 'z';
+
+    }
+
+    cout<<"value of str: "<<str<<"\n";
+}
 
 

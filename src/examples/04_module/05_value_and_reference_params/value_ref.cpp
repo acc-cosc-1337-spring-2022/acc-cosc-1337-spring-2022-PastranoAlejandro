@@ -21,3 +21,37 @@ Try to assign a value to num1, generates error.
 
 @return does not return a value
 */
+void static_var()
+{
+    static int cnt = 0;
+    std::cout<<"cnt"<<cnt<<"\n";
+    cnt++;
+    std::cout<<"cnt"<<cnt<<"\n";
+
+}
+void static_var1()
+{
+    static int cnt = 0;
+    std::cout<<"cnt"<<cnt<<"\n";
+    cnt++;
+    std::cout<<"cnt"<<cnt<<"\n"; 
+}
+
+double get_total(double amount, double rate)
+{
+    return amount * rate;
+}
+
+double get_totals(double amount, double num, double rate)
+{
+    return amount * num * rate;
+}
+
+double get_weekly_pay(double salary)
+{
+    return salary / 52;
+}
+double get_weekly_pay(double hours, double rate)
+{
+    return hours * rate;
+}

@@ -1,6 +1,10 @@
 #include<string>
 #include<vector>
 
+void loop_string_w_for_range(std::string str);
+void loop_string_w_for_range_ref(std::string& str);
+void my_function(int& num1, int num2);
+
 /*
 Write function prototype for void function loop_vector_w_index with no parameters.
 

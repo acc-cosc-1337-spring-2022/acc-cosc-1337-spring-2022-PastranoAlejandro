@@ -1,8 +1,34 @@
-#include "for_ranged.h"
-#include<iostream>
+#include"vec.h"
+#include<string>
 #include<vector>
 
 using std::vector;
+
+
+void loop_string_w_for_range(std::string str)
+{
+    str = "JOE";
+}
+void loop_string_w_for_range_ref(std::string& str)
+{
+    //str = "JOE";
+
+    for(auto& ch: str)//iterating by value
+    {
+        ch = 'z';
+
+
+    }
+
+}
+void my_function(int& num1, int num2)
+{
+    num1 = 50;
+    num2 = 100;
+}
+
+
+
 
 /*
 Function loop_vector_w_index 

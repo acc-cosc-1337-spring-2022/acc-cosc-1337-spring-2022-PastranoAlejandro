@@ -11,7 +11,7 @@ void loop_string_w_for_range(std::string str)
 }
 void loop_string_w_for_range_ref(std::string& str)
 {
-    //str = "JOE";
+    str = "JOE";
 
     for(auto& ch: str)//iterating by value
     {
@@ -29,6 +29,14 @@ void my_function(int& num1, int num2)
 
 
 
+void loop_vector_w_index(std::vector<int> nums)
+{
+    for(int i=0; i < nums.size(); i++)
+    {
+        nums[i] = -1;
+
+    }
+}
 
 /*
 Function loop_vector_w_index 

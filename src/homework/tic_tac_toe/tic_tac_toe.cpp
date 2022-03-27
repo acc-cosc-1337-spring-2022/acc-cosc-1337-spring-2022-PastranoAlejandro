@@ -29,7 +29,7 @@ void TicTacToe::display_board()const
 
 void TicTacToe::set_next_player()
 {
-    if(player == "X")
+    if(player == "X" || player == "x")
     {
         player = "O";
     }

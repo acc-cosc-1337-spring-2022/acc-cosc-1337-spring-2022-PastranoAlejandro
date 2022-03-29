@@ -30,3 +30,19 @@ void BankAccount::withdraw(int amount)
 
     }
 }
+
+//free function outside of class scope
+void display_balance(const BankAccount& account)
+{
+    
+    std::cout<<"Free function balance: "<<account.get_balance()<<"\n";
+
+
+}
+
+BankAccount get_account()
+{
+    BankAccount a;
+    return a;
+
+}

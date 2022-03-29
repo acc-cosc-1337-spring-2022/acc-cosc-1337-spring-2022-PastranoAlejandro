@@ -1,7 +1,7 @@
 //bank_account.h
 #include <stdlib.h>
 #include<time.h>
-
+#include <iostream>
 
 //Header Guards -- helps bankaccount not get defined more than once
 #ifndef BANK_ACCOUNT_H
@@ -29,3 +29,7 @@ private:   //only class has access to private
 };
 
 #endif
+
+//free function
+void display_balance(const BankAccount& account);//by value or copy
+BankAccount get_account();

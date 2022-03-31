@@ -11,6 +11,9 @@
 
 class BankAccount
 {
+friend void friend_display_balance(BankAccount account);
+friend std::ostream& operator<<(std::ostream& out, const BankAccount& account);
+friend std::istream& operator>>(std::istream& in, BankAccount& account);
 
 public:
     BankAccount(){balance = get_balance_from_db();}//Default synthesized constructor -- creates it by default only if we dont have any other constructors!

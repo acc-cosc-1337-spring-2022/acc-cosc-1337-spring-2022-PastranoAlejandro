@@ -1,13 +1,26 @@
 #include "atm.h"
+#include "checking_account.h"
 #include<iostream>
 #include<time.h>
-using std::cout;
+
+using std::cout; using std::cin;
 
 
 int main()
 {
-	srand (time(NULL));//random generator for account
-	ATM atm;
+	srand (time(NULL));//random generator 
+	CheckingAccount checking;
+	cout<<checking.get_balance();
+	
+	/*BankAccount account;
+	display_balance(account);
+	friend_display_balance(account);
+	cout<<account;
+
+	cin>>account;
+	cout<<account;
+
+	
 	int menu_option;
 	char cont;
 

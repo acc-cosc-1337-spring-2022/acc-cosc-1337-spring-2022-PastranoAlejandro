@@ -9,7 +9,7 @@ int BankAccount::get_balance() const//so noone can change the balance, unless yo
 
 int BankAccount::get_balance_from_db()
 {
-    return rand() % 1000 + 1; //random number
+    return rand() % 10000 + 1; //random number
 }
 
 void BankAccount::deposit(int amount)
@@ -45,4 +45,31 @@ BankAccount get_account()
     BankAccount a;
     return a;
 
+}
+
+//friend function
+void friend_display_balance(BankAccount account)
+{
+    
+    std::cout<<"Friend Function balance: "<<account.get_balance();
+
+}
+
+//overload operator
+std::ostream& operator<<(std::ostream& out, const BankAccount& account)
+{
+    out<<"Operator overload balance: "<< account.balance;
+
+    return out;
+}
+
+
+std::istream& operator>>(std::istream& in, BankAccount& account)
+{
+    int amount;
+    std::cout<<"Enter Amount: ";
+    in>>amount;
+    account.deposit(amount);
+
+    return in;
 }

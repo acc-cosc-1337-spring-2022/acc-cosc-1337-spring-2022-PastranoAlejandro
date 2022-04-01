@@ -20,13 +20,18 @@ int main()
 	}
 		do
 		{
-			cout<<"Invalid Input\n";
-			cout<<"Enter first player (X or O)";
-			cin>>first_player;
-			for(auto &u : first_player)
+			if(first_player != "X" && first_player != "O")
 			{
-				u = toupper(u);
+				cout<<"Invalid Input\n";
+				cout<<"Enter first player (X or O)";
+				cin>>first_player;
+				for(auto &u : first_player)
+				{
+					u = toupper(u);
+				}
+
 			}
+			
 
 			
 

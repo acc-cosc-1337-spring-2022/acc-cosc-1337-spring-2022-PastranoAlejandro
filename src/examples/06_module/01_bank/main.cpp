@@ -9,7 +9,7 @@ using std::cout; using std::cin;
 int main()
 {
 	srand (time(NULL));//random generator 
-	CheckingAccount checking;
+	CheckingAccount checking(100);
 	cout<<checking.get_balance();
 	
 	/*BankAccount account;

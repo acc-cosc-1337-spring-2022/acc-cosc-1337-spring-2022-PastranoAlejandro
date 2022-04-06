@@ -9,7 +9,8 @@ class CheckingAccount: public BankAccount//inherits functinality from bankaccoun
 {
 public:
     CheckingAccount(){} //intially c++ creates default construtor, default needed to exectue code without parameter
-    CheckingAccount(int b) : BankAccount(b) {BankAccount::get_balance();}//execute the bankaccount constructor
+    CheckingAccount(int b) : BankAccount(b) {;}//execute the bankaccount constructor
+    int get_balance() const;
 
 
 };

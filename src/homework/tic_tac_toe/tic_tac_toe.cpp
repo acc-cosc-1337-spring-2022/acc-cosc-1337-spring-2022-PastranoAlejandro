@@ -172,9 +172,11 @@ std::istream& operator>>(std::istream& in, TicTacToe& game)
 
 
     }
-    else
+    else if(!in)
     {
-        cout<<"\nInvalid Position";
+        cout<<"\nInvalid Position"<<"\n";
+        in.clear();
+        in.ignore();
     }
 
     return in;

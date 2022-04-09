@@ -2,15 +2,18 @@
 #include "checking_account.h"
 #include<iostream>
 #include<time.h>
+#include<memory>
 
-using std::cout; using std::cin;
+using std::cout; using std::cin; using std::unique_ptr; using std::make_unique;
 
 
 int main()
 {
 	srand (time(NULL));//random generator 
-	CheckingAccount checking(100);
-	cout<<checking.get_balance();
+
+	unique_ptr<BankAccount> account = make_unique<CheckingAccount>(100);//point to instance of bank account
+	cout<<account->get_balance();//Bankaccount getbalance function exectued 
+
 	
 	/*BankAccount account;
 	display_balance(account);

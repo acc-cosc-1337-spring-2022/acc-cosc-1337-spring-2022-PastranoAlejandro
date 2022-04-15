@@ -18,9 +18,9 @@ friend std::istream& operator>>(std::istream& in, BankAccount& account);
 public:
     BankAccount(){balance = get_balance_from_db();}//Default synthesized constructor -- creates it by default only if we dont have any other constructors!
     BankAccount(int b) : balance(b){/*empty function code*/}
-    int get_balance() const;//telling C++ we will provide function code later
-    void deposit(int amount);
-    void withdraw(int amount);
+    virtual int get_balance() const;//telling C++ we will provide function code later
+    virtual void deposit(int amount) final;
+    virtual void withdraw(int amount) final;
 
 
 

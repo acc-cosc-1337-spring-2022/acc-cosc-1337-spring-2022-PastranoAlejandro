@@ -3,17 +3,27 @@
 #include<iostream>
 #include<time.h>
 #include<memory>
+#include "savings_account.h"
+#include<vector>
 
 using std::cout; using std::cin; using std::unique_ptr; using std::make_unique;
-
+using std::vector;
 
 int main()
 {
 	srand (time(NULL));//random generator 
 
 	unique_ptr<BankAccount> account = make_unique<CheckingAccount>(100);//point to instance of bank account
-	cout<<account->get_balance();//Bankaccount getbalance function exectued 
+	cout<<account->get_balance()<<"\n";//Bankaccount getbalance function exectued 
+	unique_ptr<BankAccount> savings = make_unique<SavingsAccount>(200);
+	vector<unique_ptr<BankAccount>> account;
+	accounts.push_back(std::move(account));
+	accounts.push_back(std::move(savings));
 
+	for(auto& account: accounts)
+	{
+		cout<<account->get_balance()<<"\n";
+	}
 	
 	/*BankAccount account;
 	display_balance(account);

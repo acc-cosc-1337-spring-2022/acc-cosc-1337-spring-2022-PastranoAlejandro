@@ -2,13 +2,15 @@
 #include "tic_tac_toe_manager.h"
 #include "tic_tac_toe_3.h"
 #include "tic_tac_toe_4.h"
+#include "tic_tac_toe_data.h"
 #include<cctype>
 using std::cout; using std::cin; using std::string;
 
 int main() 
 {
 	unique_ptr<TicTacToe> game;
-	TicTacToeManager manager;
+	TicTacToeData data;
+	TicTacToeManager manager(data);
 	string first_player;
 	int w;
 	int o;

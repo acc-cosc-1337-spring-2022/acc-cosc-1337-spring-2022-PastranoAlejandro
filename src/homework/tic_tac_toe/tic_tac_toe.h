@@ -3,6 +3,8 @@
 #include<iostream>
 #include <memory>
 
+
+
 using std::ostream; using std::istream; using std::vector; using std::string; using std::cout; using std::cin;
 using std::unique_ptr; using std::make_unique;
 
@@ -12,6 +14,7 @@ using std::unique_ptr; using std::make_unique;
 class TicTacToe
 {
 public:
+    TicTacToe(std::vector<string> p , string win) : pegs(p), winner(win){}
     TicTacToe(int s) : pegs(s*s, " "){}
     bool game_over();
     void start_game(std::string first_player);
@@ -20,6 +23,7 @@ public:
     std::string get_winner(){return winner;}
     friend std::ostream& operator<<(std::ostream& out, const TicTacToe& game);
     friend std::istream& operator>>(std::istream& in, TicTacToe& game);
+    vector<string> get_pegs()const{return pegs;}
 
 
 protected:
